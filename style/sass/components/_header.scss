@@ -1,0 +1,240 @@
+//  header
+html[dir="ltr"]{
+    .lang {
+        span{
+            font-size: 13px;
+        }
+    }
+}
+header{
+    padding: 20px 0;
+    background-color: transparent;
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    left: 0;
+    right: 0;
+}
+nav{
+    transition: inset-inline-start linear .4s;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    a{
+        display: block;
+        width: 100%;
+    }
+    img{
+        width: 206px;
+        max-width: 100%;
+    }
+}
+.lang a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: $white-color;
+    &:hover{
+        text-decoration: none ;
+        color: $white-color;
+    }
+    img{
+      margin-inline-start: 5px;
+    }
+   
+}
+
+
+.nav-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li:last-child{
+        margin-inline-end: 0;
+    }
+   > li{
+        margin-inline-end: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a{
+            text-transform: capitalize;
+            transition: all linear .3s;
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 500;
+            &:hover{
+                text-decoration: none;
+                color: #c1c1c1;
+            }
+        }
+    }
+}
+
+
+
+.openNav-btn{
+    display: none !important;
+    cursor: pointer;
+    i {
+        font-size: 28px;
+        color: $white-color;
+       
+    }
+}
+
+
+.closeNav-btn{
+    display: none;
+    cursor: pointer;
+}
+
+.open-nav{
+    inset-inline-start: -100% !important;
+}
+
+@include max-992 {
+    .header-content{
+        flex-wrap: wrap;
+    }
+    .logo {
+        img {
+            width: 150px;
+            max-width: 100%;
+        }
+    }
+}
+
+@include max-768 {
+    
+    header{
+        padding: 10px 0;
+    }
+    .icon-rotate::after{
+        transform: translateY(-50%) rotate(180deg)  !important;
+        top: 14px !important;
+    }
+    .header-content > .lang{
+        display: none;
+    }
+   
+  
+    .logo img{
+        width: 120px;
+        max-width: 100%;
+    }
+    .header-content{
+        position: relative;
+        width: 100%;
+    }
+    .openNav-btn{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    nav{
+        position: fixed ;
+        overflow: auto;
+        top: 0 ;
+        inset-inline-start: 0%;
+        width: 100%;
+        z-index: 99;
+        height: 100%;
+        padding: 25px 35px 0 35px;
+        background-color: $main-color;
+    }
+    .nav-ul{
+        flex-direction: column;
+        margin: 80px 0 0 0 !important;
+        align-items: flex-start;
+    }
+    .nav-ul > li{
+        margin-bottom: 20px;
+        margin-inline-end: 0;
+        width: 100%;
+        a{
+              display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            &::after{
+                height: auto;
+            }
+        }
+    }
+    .closeNav-btn{
+      display: block;
+        i{
+            font-size: 24px;
+            color: $white-color ;
+        }
+    }
+
+
+    .close-lang-holder{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav{
+        .lang a img  {
+            margin-inline-start: 5px;
+        }
+    }
+   
+   
+}
+
+
+
+
+@include min-768{
+    .close-lang-holder{
+        display: none;
+    }
+    .lang2{
+        display: none;
+    }
+    .contactus{
+        margin-inline-end: 0 !important;
+    }
+    .ul-drop{
+        text-align: center;
+    }
+    html[dir="rtl"]{
+        .ul-drop{
+            inset-inline-end: 50%;
+            transform: translateX(-50%);
+        }
+    }
+   
+    .li-drop .ul-drop a{
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width : 992px) and (max-width:1200px) {
+    .nav-ul > li{
+        margin-inline-end: 12px;
+    }
+
+} 
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .nav-ul > li a{
+        font-size: 14px;
+    }
+}
