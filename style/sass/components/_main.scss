@@ -58,14 +58,15 @@
 @include max-768 {
   .banner-desc {
     h1 {
-      font-size: 21px;
+      font-size: 24px;
       margin: 0;
       padding: 0;
     }
     h4{
-      font-size: 16px;
-      max-width: 80%;
       line-height: 1.7;
+      font-size: 16px;
+      max-width: 85%;
+      font-weight: 400;
     }
   }
  
