@@ -515,21 +515,9 @@ nav {
   left: 48%;
   position: absolute;
   transform: translateX(-48%);
-  -webkit-animation-name: scroll;
-          animation-name: scroll;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(20px);
-  }
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes scroll {
@@ -656,7 +644,7 @@ footer h4 {
   border-radius: 22px;
   background-color: #f5f5f5;
   outline: none !important;
-  border: 1px solid transparent;
+  border: none;
   color: #a6a6a6;
   padding: 0 25px 0 50px;
   font-size: 16px;
@@ -665,9 +653,6 @@ footer h4 {
 .message input::-webkit-input-placeholder {
   color: #a6a6a6;
   font-size: 15px;
-}
-.message input:focus {
-  border-color: #186eb1 !important;
 }
 .message .mail-icon {
   color: #186eb1;
@@ -728,9 +713,6 @@ footer h4 {
   .message input::-moz-placeholder {
     font-size: 13px;
   }
-  .message input:-ms-input-placeholder {
-    font-size: 13px;
-  }
   .message input::placeholder {
     font-size: 13px;
   }
@@ -788,9 +770,6 @@ footer h4 {
     font-size: 15px;
   }
   .message input::-moz-placeholder {
-    font-size: 13px;
-  }
-  .message input:-ms-input-placeholder {
     font-size: 13px;
   }
   .message input::placeholder {
